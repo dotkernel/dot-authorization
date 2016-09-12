@@ -1,0 +1,34 @@
+{
+  "name": "dotkernel/dot-authorization",
+  "type": "library",
+  "description": "Authorization service abstractions",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "n3vrax",
+      "email": "tibi@apidemia.com"
+    }
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8",
+    "squizlabs/php_codesniffer": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "DotKernel\\DotAuthorization\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DotKernelTest\\DotAuthorization\\": "test/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.6-dev"
+    }
+  }
+}

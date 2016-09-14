@@ -7,11 +7,11 @@
  * Time: 7:49 PM
  */
 
-namespace DotKernel\DotAuthorization;
+namespace Dot\Authorization;
 
 /**
  * Interface AuthorizationInterface
- * @package DotKernel\DotAuthorization
+ * @package Dot\Authorization
  */
 interface AuthorizationInterface
 {

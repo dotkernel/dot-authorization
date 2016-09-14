@@ -7,11 +7,11 @@
  * Time: 7:49 PM
  */
 
-namespace DotKernel\DotAuthorization\Exception;
+namespace Dot\Authorization\Exception;
 
 /**
  * Interface ExceptionInterface
- * @package DotKernel\DotAuthorization\Exception
+ * @package Dot\Authorization\Exception
  */
 interface ExceptionInterface
 {

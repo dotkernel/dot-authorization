@@ -18,12 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "DotKernel\\DotAuthorization\\": "src/"
+      "Dot\\Authorization\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "DotKernelTest\\DotAuthorization\\": "test/"
+      "DotTest\\Authorization\\": "test/"
     }
   },
   "extra": {

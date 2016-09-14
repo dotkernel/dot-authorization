@@ -7,13 +7,13 @@
  * Time: 7:49 PM
  */
 
-namespace DotKernel\DotAuthorization\Identity;
+namespace Dot\Authorization\Identity;
 
-use DotKernel\DotAuthorization\Role\RoleInterface;
+use Dot\Authorization\Role\RoleInterface;
 
 /**
  * Interface IdentityInterface
- * @package DotKernel\DotAuthorization\Identity
+ * @package Dot\Authorization\Identity
  */
 interface IdentityInterface
 {

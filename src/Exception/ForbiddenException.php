@@ -15,5 +15,5 @@ namespace Dot\Authorization\Exception;
  */
 class ForbiddenException extends \Exception implements ExceptionInterface
 {
-    
+
 }

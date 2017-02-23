@@ -23,5 +23,5 @@ interface AuthorizationInterface
      * @param mixed|null $context
      * @return bool
      */
-    public function isGranted(string $permission, array $roles = [], mixed $context = null): bool;
+    public function isGranted(string $permission, array $roles = [], $context = null): bool;
 }

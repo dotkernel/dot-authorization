@@ -7,7 +7,11 @@
  * Time: 7:49 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\Authorization\Exception;
+
+use Exception;
 
 /**
  * Class ForbiddenException
@@ -15,5 +19,8 @@ namespace Dot\Authorization\Exception;
  */
 class ForbiddenException extends \Exception implements ExceptionInterface
 {
-
+    public function __construct($message = "", $code = 403, Exception $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+    }
 }

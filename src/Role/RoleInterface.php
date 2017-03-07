@@ -7,6 +7,8 @@
  * Time: 7:49 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\Authorization\Role;
 
 /**
@@ -18,5 +20,5 @@ interface RoleInterface
     /**
      * @return string
      */
-    public function getName();
+    public function getName(): string;
 }

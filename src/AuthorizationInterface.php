@@ -7,6 +7,8 @@
  * Time: 7:49 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\Authorization;
 
 /**
@@ -16,10 +18,10 @@ namespace Dot\Authorization;
 interface AuthorizationInterface
 {
     /**
-     * @param $permission
+     * @param string $permission
      * @param array $roles
-     * @param null $context
+     * @param mixed|null $context
      * @return bool
      */
-    public function isGranted($permission, array $roles = [], $context = null);
+    public function isGranted(string $permission, array $roles = [], $context = null): bool;
 }

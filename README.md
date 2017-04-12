@@ -1,31 +1,37 @@
 # dot-authorization
 
-Package defining authorization abstractions for authorization services. This package is common between several other dotkernel packages which work with authorization.
+Authorization base package defining interfaces for authorization services to be used with DotKernel applications.
+**Requires PHP version >= 7.1**
 
 ## Installation
 
-Usually installed with a concrete implementation, if developing custom authorization service, add this as a dependency by running the following command
+Run the following command in you project directory
 ```bash
 $ composer require dotkernel/dot-authorization
 ```
 
+Please note that usually this pacakge will be installed as a dependency to a concrete implementation, so you won't need to add this to your project manually.
+
 ## AuthorizationInterface
 
-This interface must be implemented by authorization services. The fully qualified interface name should also be used as the service name of the authorization service.
+Defines the interface that should be implemented by any authorization service, in order to work with DotKernel applications. This is a result of the fact that, by default, any DotKernel package which has to do with authorization is assuming that a service is registered in the service container using as service name this interface's FQN
 
-It defines just one method that returns a boolean value
-
+### Methods
 ```php
-public function isGranted($permission, array $roles = [], $context = null);
+public function isGranted(string $permission, array $roles = [], $context = null): bool;
 ```
+* this is the only method that deals with authorization. Given a permission and a list of roles, should return a boolean value of true if at least one role has access to the requested permission. As you can see, we expect that the authorization service to be implemented as an RBAC.
 
 ## RoleInterface
 
-Defines the interface that Role objects must implement. A role object should be able to retrieve its name, so this interface has only one method defined `getName()`.
+Defines the interface that Role objects must implement. A role object should be able to retrieve its name, so this interface has only one method defined
+```php
+public function getName(): string;
+```
 
 ## IdentityInterface
 
-Interface that needs to be implemented by entities that are assigned roles. They should be able to retrieve their roles by defining a `getRoles()` method.
+Interface that needs to be implemented by entities that support roles. They should be able to retrieve their roles by defining a `getRoles()` method.
 The roles should be an array of role names or role objects
 
 This package is suitable for RBAC style authorization. Roles can be flat or hierarchical and they are assigned permissions.
@@ -33,5 +39,4 @@ A role is granted if it has the required permission.
 
 ## ForbiddenException
 
-This exception can be thrown from a middleware in case the user is forbidden to access some content.
-The status code of a forbidden response is 403. Error handling middleware should be provided to handle this kind of error.
+Exception to be thrown when accessing content without having the required permissions. This can be used withing an application to trigger a forbidden error and do a custom action(like displaying a forbidden page or redirecting). This package does not define how you should handle such situations. There is a concrete authorization implementation in [dot-rbac](https://github.com/dotkernel/dot-rbac) and a forbidden exception handler in [dot-rbac-guard](https://github.com/dotkernel/dot-rbac-guard) as DotKernel default packages for authorization.

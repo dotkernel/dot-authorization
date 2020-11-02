@@ -1,7 +1,7 @@
 # dot-authorization
 
 Authorization base package defining interfaces for authorization services to be used with DotKernel applications.
-**Requires PHP version >= 7.1**
+**Requires PHP version >= 7.4**
 
 ## Installation
 

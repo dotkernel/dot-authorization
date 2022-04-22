@@ -16,7 +16,7 @@
         "laminas-dependency"
     ],
     "require": {
-        "php": "^7.3 || ~8.0.0 || ~8.1.0",
+        "php": "^7.4 || ~8.0.0 || ~8.1.0",
         "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {

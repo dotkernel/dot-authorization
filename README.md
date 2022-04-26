@@ -1,7 +1,14 @@
 # dot-authorization
 
 Authorization base package defining interfaces for authorization services to be used with DotKernel applications.
-**Requires PHP version >= 7.4**
+
+![OSS Lifecycle](https://img.shields.io/osslifecycle/dotkernel/dot-authorization)
+![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authorization/3.2.0)
+
+[![GitHub issues](https://img.shields.io/github/issues/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/issues)
+[![GitHub forks](https://img.shields.io/github/forks/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/network)
+[![GitHub stars](https://img.shields.io/github/stars/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/stargazers)
+[![GitHub license](https://img.shields.io/github/license/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/blob/3.0/LICENSE.md)
 
 ## Installation
 

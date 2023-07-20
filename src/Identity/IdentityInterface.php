@@ -6,9 +6,6 @@ namespace Dot\Authorization\Identity;
 
 use Dot\Authorization\Role\RoleInterface;
 
-/**
- * Interface IdentityInterface
- */
 interface IdentityInterface
 {
     /**

@@ -3,7 +3,7 @@
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="Dot Authentication Test Suite">
+        <testsuite name="Dot Authorization Test Suite">
             <directory>./test</directory>
         </testsuite>
     </testsuites>

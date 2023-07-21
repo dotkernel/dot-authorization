@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DotTest\Exception;
+namespace DotTest\Authorization\Exception;
 
 use Dot\Authorization\Exception\ExceptionInterface;
 use Dot\Authorization\Exception\RuntimeException;

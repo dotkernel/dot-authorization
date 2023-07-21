@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DotTest\Identity;
+namespace DotTest\Authorization\Identity;
 
 use Dot\Authorization\Identity\IdentityInterface;
 use PHPUnit\Framework\MockObject\Exception;

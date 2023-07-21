@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DotTest\Role;
+namespace DotTest\Authorization\Role;
 
 use Dot\Authorization\Role\RoleInterface;
 use PHPUnit\Framework\MockObject\Exception;

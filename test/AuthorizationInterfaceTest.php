@@ -29,6 +29,6 @@ class AuthorizationInterfaceTest extends TestCase
 
     public function testFunction(): void
     {
-        $this->assertFalse($this->mockAuthorizationInterface->isGranted('no', ['admin'], null));
+        $this->assertFalse($this->mockAuthorizationInterface->isGranted('no', ['admin']));
     }
 }

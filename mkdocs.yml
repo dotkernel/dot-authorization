@@ -7,7 +7,7 @@ extra:
     - v3
 nav:
   - Home: index.md
-  - v2:
+  - v3:
       - Overview: v3/overview.md
       - Installation: v3/installation.md
       - Configuration: v3/configuration.md

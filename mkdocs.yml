@@ -13,7 +13,7 @@ nav:
       - Configuration: v3/configuration.md
       - Usage: v3/usage.md
 site_name: dot-authorization
-site_description: "DotKernel authorization service abstractions"
+site_description: "Dotkernel authorization service abstractions"
 repo_url: "https://github.com/dotkernel/dot-authorization"
 plugins:
   - search

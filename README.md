@@ -2,7 +2,7 @@
 
 Dotkernel authorization service abstractions.
 
-`dot-authorization` is Dotkernel's authorization base package which define interfaces for authorization services to be used with Dotkernel applications.
+`dot-authorization` is Dotkernel's authorization base package that defines interfaces for authorization services to be used with Dotkernel applications.
 
 ## Documentation
 
@@ -11,7 +11,7 @@ Documentation is available at: https://docs.dotkernel.org/dot-authorization/.
 ## Badges
 
 ![OSS Lifecycle](https://img.shields.io/osslifecycle/dotkernel/dot-authorization)
-![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authorization/3.7.0)
+![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authorization/3.8.0)
 
 [![GitHub issues](https://img.shields.io/github/issues/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/issues)
 [![GitHub forks](https://img.shields.io/github/forks/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/network)
@@ -24,7 +24,7 @@ Documentation is available at: https://docs.dotkernel.org/dot-authorization/.
 
 ## Installation
 
-Run the following command in you project directory:
+Run the following command in your project directory:
 
 ```shell
 composer require dotkernel/dot-authorization
@@ -34,7 +34,8 @@ Please note that usually this package will be installed as a dependency to a con
 
 ## AuthorizationInterface
 
-Defines the interface that should be implemented by any authorization service, in order to work with Dotkernel applications. This is a result of the fact that, by default, any Dotkernel package which has to do with authorization is assuming that a service is registered in the service container using as service name this interface's FQN
+Defines the interface that should be implemented by any authorization service to work with Dotkernel applications.
+This is a result of the fact that, by default, any Dotkernel package which has to do with authorization is assuming that a service is registered in the service container using as service name this interface's FQN.
 
 ### Methods
 
@@ -42,11 +43,15 @@ Defines the interface that should be implemented by any authorization service, i
 public function isGranted(string $permission, array $roles = [], $context = null): bool;
 ```
 
-* this is the only method that deals with authorization. Given a permission and a list of roles, should return a boolean value of true if at least one role has access to the requested permission. As you can see, we expect that the authorization service to be implemented as an RBAC.
+> This is the only method that deals with authorization.
+
+Given a permission and a list of roles, should return a boolean value of true if at least one role has access to the requested permission.
+As you can see, we expect that the authorization service to be implemented as a RBAC.
 
 ## RoleInterface
 
-Defines the interface that Role objects must implement. A role object should be able to retrieve its name, so this interface has only one method defined
+Defines the interface that Role objects must implement.
+A role object should be able to retrieve its name, so this interface has only one method defined.
 
 ```php
 public function getName(): string;
@@ -65,6 +70,6 @@ A role is granted if it has the required permission.
 ## ForbiddenException
 
 Exception to be thrown when accessing content without having the required permissions.
-This can be used withing an application to trigger a forbidden error and do a custom action(like displaying a forbidden page or redirecting).
+This can be used withing an application to trigger a forbidden error and do a custom action (like displaying a forbidden page or redirecting).
 This package does not define how you should handle such situations.
 There is a concrete authorization implementation in [dot-rbac](https://github.com/dotkernel/dot-rbac) and a forbidden exception handler in [dot-rbac-guard](https://github.com/dotkernel/dot-rbac-guard) as Dotkernel default packages for authorization.

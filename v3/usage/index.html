@@ -27,9 +27,9 @@
         <link rel="stylesheet" href="https://docs.dotkernel.org/css/bootstrap.css">
         <link rel="stylesheet" href="https://docs.dotkernel.org/css/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://docs.dotkernel.org/css/docs.css">
-        <script src="https://docs.dotkernel.org//js/bootstrap.js" defer></script>
-        <script src="https://docs.dotkernel.org//js/docs.js" defer></script>
-        <script src="https://docs.dotkernel.org//js/scripts.js" defer></script>
+        <script src="https://docs.dotkernel.org/js/bootstrap.js" defer></script>
+        <script src="https://docs.dotkernel.org/js/docs.js" defer></script>
+        <script src="https://docs.dotkernel.org/js/scripts.js" defer></script>
     </head>
     <body data-bs-spy="scroll" data-bs-target=".toc" data-bs-offset="100">
 
@@ -51,60 +51,72 @@
                         
                         <li class="dropdown-item ">
                             <a href="https://docs.dotkernel.org/api-documentation/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">API</span>
-                                    <span>Dotkernel API</span>
                                 </div>
                             </a>
                         </li>
                         
                         <li class="dropdown-item ">
                             <a href="https://docs.dotkernel.org/admin-documentation/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">Admin</span>
-                                    <span>Dotkernel Admin</span>
                                 </div>
                             </a>
                         </li>
                         
                         <li class="dropdown-item ">
                             <a href="https://docs.dotkernel.org/frontend-documentation/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">Frontend</span>
-                                    <span>Dotkernel Frontend</span>
                                 </div>
                             </a>
                         </li>
                         
                         <li class="dropdown-item ">
                             <a href="https://docs.dotkernel.org/light-documentation/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">Light</span>
-                                    <span>Dotkernel Light</span>
                                 </div>
                             </a>
                         </li>
                         
-                        <li class="dropdown-item bg-light">
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/queue-documentation/" class="nav-link d-flex gap-4 align-items-center">
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
+                                    <span class="fw-bold d-block">Queue</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="dropdown-item bg-dark-subtle">
                             <a href="https://docs.dotkernel.org/packages/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">Packages</span>
-                                    <span>Dotkernel packages</span>
                                 </div>
                             </a>
                         </li>
                         
                         <li class="dropdown-item ">
                             <a href="https://docs.dotkernel.org/development/" class="nav-link d-flex gap-4 align-items-center">
-                                <img alt="Dotkernel Logo" class="d-inline-block align-text-top" height="50" src="https://docs.dotkernel.org/img/dk_logomark.svg" width="45" />
-                                <div>
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
                                     <span class="fw-bold d-block">Development</span>
-                                    <span>WSL2 Development Environment</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="dropdown-item ">
+                            <a href="https://docs.dotkernel.org/headless-documentation/" class="nav-link d-flex gap-4 align-items-center">
+                                <i class="bi bi-arrow-return-right text-primary"></i>
+                                <div class="py-1">
+                                    <span class="fw-bold d-block">Headless Platform</span>
                                 </div>
                             </a>
                         </li>
@@ -132,6 +144,8 @@
                 </li>
                 <li class="nav-item">
                     
+    
+
                 </li>
             </ul>
         </div>
@@ -258,7 +272,7 @@
 
     <h1 id="usage">Usage</h1>
 <h2 id="authorizationinterface">AuthorizationInterface</h2>
-<p>Defines the interface that should be implemented by any authorization service, in order to work with Dotkernel applications.
+<p>Defines the interface that should be implemented by any authorization service to work with Dotkernel applications.
 This is a result of the fact that, by default, any Dotkernel package which has to do with authorization is assuming that a service is registered in the service container using as service name this interface's FQN.</p>
 <h3 id="methods">Methods</h3>
 <pre class="highlight"><code class="language-php">public function isGranted(string $permission, array $roles = [], $context = null): bool;</code></pre>
@@ -266,7 +280,7 @@ This is a result of the fact that, by default, any Dotkernel package which has t
 <p>This is the only method that deals with authorization.</p>
 </blockquote>
 <p>Given a permission and a list of roles, should return a boolean value of true if at least one role has access to the requested permission.
-As you can see, we expect that the authorization service to be implemented as an RBAC.</p>
+As you can see, we expect that the authorization service to be implemented as a RBAC.</p>
 <h2 id="roleinterface">RoleInterface</h2>
 <p>Defines the interface that Role objects must implement.
 A role object should be able to retrieve its name, so this interface has only one method defined.</p>
@@ -274,13 +288,13 @@ A role object should be able to retrieve its name, so this interface has only on
 <h2 id="identityinterface">IdentityInterface</h2>
 <p>Interface that needs to be implemented by entities that support roles.
 They should be able to retrieve their roles by defining a <code>getRoles()</code> method.
-The roles should be an array of role names or role objects</p>
+The roles should be an array of role names or role objects.</p>
 <p>This package is suitable for RBAC style authorization.
-Roles can be flat or hierarchical and they are assigned permissions.
+Roles can be flat or hierarchical, and they are assigned permissions.
 A role is granted if it has the required permission.</p>
 <h2 id="forbiddenexception">ForbiddenException</h2>
 <p>Exception to be thrown when accessing content without having the required permissions.
-This can be used withing an application to trigger a forbidden error and do a custom action(like displaying a forbidden page or redirecting).
+This can be used withing an application to trigger a forbidden error and do a custom action (like displaying a forbidden page or redirecting).
 This package does not define how you should handle such situations.
 There is a concrete authorization implementation in <a href="https://github.com/dotkernel/dot-rbac">dot-rbac</a> and a forbidden exception handler in <a href="https://github.com/dotkernel/dot-rbac-guard">dot-rbac-guard</a> as Dotkernel default packages for authorization.</p>
 
@@ -404,6 +418,11 @@ There is a concrete authorization implementation in <a href="https://github.com/
                             <i class="bi bi-rss-fill"></i> Feed
                         </a>
                     </li>
+                    <li class="support__list-item col-lg-6 mb-md-3">
+                        <a href="https://github.com/orgs/dotkernel/discussions" class="support__link" title="Blog feed" target="_blank">
+                            <i class="bi bi-chat-left-text"></i> Discussions
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -411,7 +430,7 @@ There is a concrete authorization implementation in <a href="https://github.com/
         <hr class="mt-5" />
 
         <div class="footer_copy">
-            &#169; Copyright Dotkernel 2024. All rights reserved.
+            &#169; Copyright Dotkernel <span id="current-year"></span>. All rights reserved.
         </div>
     </div>
 </footer>

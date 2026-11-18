@@ -4,6 +4,7 @@
 
 | Version | Supported          | PHP Version                                                                                                       |
 |---------|--------------------|-------------------------------------------------------------------------------------------------------------------|
+| 4.x     | :white_check_mark: | ![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authorization/4.0.0) |
 | 3.x     | :white_check_mark: | ![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-authorization/3.8.0) |
 | <= 2.x  | :x:                |                                                                                                                   |
 
@@ -25,7 +26,6 @@ release prior to any public exposure; this helps protect the project's
 users and provides them with a chance to upgrade and/or update to
 protect their applications.
 
-
 ## Policy
 
 If we verify a reported security vulnerability, our policy is:
@@ -35,4 +35,3 @@ If we verify a reported security vulnerability, our policy is:
 
 - After patching the release branches, we will immediately issue new security
   fix releases for each patched release branch.
-

@@ -6,14 +6,17 @@ namespace DotTest\Authorization\Exception;
 
 use Dot\Authorization\Exception\ExceptionInterface;
 use Dot\Authorization\Exception\RuntimeException;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-class RuntimeExceptionTest extends TestCase
+#[CoversClass(RuntimeException::class)]
+final class RuntimeExceptionTest extends TestCase
 {
-    public function testInstances(): void
+    public function testIsCaughtAsPackageException(): void
     {
-        $exception = new RuntimeException('test');
-        $this->assertSame(RuntimeException::class, $exception::class);
-        $this->assertContainsOnlyInstancesOf(ExceptionInterface::class, [$exception]);
+        $this->expectException(ExceptionInterface::class);
+        $this->expectExceptionMessage('test');
+
+        throw new RuntimeException('test');
     }
 }

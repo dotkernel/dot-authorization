@@ -34,4 +34,5 @@ crashlytics-build.properties
 fabric.properties
 # Created by .ignore support plugin (hsz.mobi)
 .phpunit.result.cache
+.phpunit.cache
 .phpcs-cache

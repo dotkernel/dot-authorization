@@ -4,23 +4,37 @@ declare(strict_types=1);
 
 namespace DotTest\Authorization\Exception;
 
-use Dot\Authorization\Exception\ExceptionInterface;
 use Dot\Authorization\Exception\ForbiddenException;
-use PHPUnit\Framework\MockObject\MockObject;
+use Error;
+use LogicException;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-class ForbiddenExceptionTest extends TestCase
+#[CoversClass(ForbiddenException::class)]
+final class ForbiddenExceptionTest extends TestCase
 {
-    protected ForbiddenException|MockObject $forbiddenExceptionMock;
-
-    public function setUp(): void
+    public function testDefaults(): void
     {
-        $this->forbiddenExceptionMock = $this->createMock(ForbiddenException::class);
+        $exception = new ForbiddenException();
+
+        $this->assertSame('', $exception->getMessage());
+        $this->assertSame(403, $exception->getCode());
+        $this->assertNull($exception->getPrevious());
     }
 
-    public function testCreate(): void
+    public function testAcceptsExceptionAsPrevious(): void
     {
-        $this->assertInstanceOf(ForbiddenException::class, $this->forbiddenExceptionMock);
-        $this->assertContainsOnlyInstancesOf(ExceptionInterface::class, [$this->forbiddenExceptionMock]);
+        $previous  = new LogicException('inner');
+        $exception = new ForbiddenException('Forbidden', 403, $previous);
+
+        $this->assertSame('Forbidden', $exception->getMessage());
+        $this->assertSame($previous, $exception->getPrevious());
+    }
+
+    public function testAcceptsErrorAsPrevious(): void
+    {
+        $previous = new Error('inner');
+
+        $this->assertSame($previous, (new ForbiddenException('Forbidden', 403, $previous))->getPrevious());
     }
 }

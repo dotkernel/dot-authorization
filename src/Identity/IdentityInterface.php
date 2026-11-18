@@ -9,7 +9,7 @@ use Dot\Authorization\Role\RoleInterface;
 interface IdentityInterface
 {
     /**
-     * @return string[]|RoleInterface[]
+     * @return array<string|RoleInterface>
      */
     public function getRoles(): array;
 }

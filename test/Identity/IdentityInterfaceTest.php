@@ -6,19 +6,19 @@ namespace DotTest\Authorization\Identity;
 
 use Dot\Authorization\Identity\IdentityInterface;
 use PHPUnit\Framework\MockObject\Exception;
-use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
 
 class IdentityInterfaceTest extends TestCase
 {
-    protected IdentityInterface|MockObject $identityInterfaceMock;
+    protected IdentityInterface|Stub $identityInterfaceMock;
 
     /**
      * @throws Exception
      */
     public function setUp(): void
     {
-        $this->identityInterfaceMock = $this->createMock(IdentityInterface::class);
+        $this->identityInterfaceMock = $this->createStub(IdentityInterface::class);
         $this->identityInterfaceMock->method('getRoles')->willReturn(['admin']);
     }
 

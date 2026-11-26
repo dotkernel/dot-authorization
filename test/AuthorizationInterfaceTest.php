@@ -6,19 +6,19 @@ namespace DotTest\Authorization;
 
 use Dot\Authorization\AuthorizationInterface;
 use PHPUnit\Framework\MockObject\Exception;
-use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
 
 class AuthorizationInterfaceTest extends TestCase
 {
-    protected AuthorizationInterface|MockObject $mockAuthorizationInterface;
+    protected AuthorizationInterface|Stub $mockAuthorizationInterface;
 
     /**
      * @throws Exception
      */
     public function setUp(): void
     {
-        $this->mockAuthorizationInterface = $this->createMock(AuthorizationInterface::class);
+        $this->mockAuthorizationInterface = $this->createStub(AuthorizationInterface::class);
         $this->mockAuthorizationInterface->method('isGranted')->willReturn(false);
     }
 

@@ -6,16 +6,16 @@ namespace DotTest\Authorization\Exception;
 
 use Dot\Authorization\Exception\ExceptionInterface;
 use Dot\Authorization\Exception\ForbiddenException;
-use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
 
 class ForbiddenExceptionTest extends TestCase
 {
-    protected ForbiddenException|MockObject $forbiddenExceptionMock;
+    protected ForbiddenException|Stub $forbiddenExceptionMock;
 
     public function setUp(): void
     {
-        $this->forbiddenExceptionMock = $this->createMock(ForbiddenException::class);
+        $this->forbiddenExceptionMock = $this->createStub(ForbiddenException::class);
     }
 
     public function testCreate(): void

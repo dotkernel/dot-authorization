@@ -14,6 +14,6 @@ Dotkernel authorization service abstractions.
 [![GitHub stars](https://img.shields.io/github/stars/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/stargazers)
 [![GitHub license](https://img.shields.io/github/license/dotkernel/dot-authorization)](https://github.com/dotkernel/dot-authorization/blob/3.0/LICENSE.md)
 
-[![Build Static](https://github.com/dotkernel/dot-authorization/actions/workflows/continuous-integration.yml/badge.svg?branch=3.0)](https://github.com/dotkernel/dot-authorization/actions/workflows/continuous-integration.yml)
+[![Build Static](https://github.com/dotkernel/dot-authorization/actions/workflows/continuous-integration.yml/badge.svg?branch=3.x)](https://github.com/dotkernel/dot-authorization/actions/workflows/continuous-integration.yml)
 [![codecov](https://codecov.io/gh/dotkernel/dot-authorization/graph/badge.svg?token=ZBZDEA3LY8)](https://codecov.io/gh/dotkernel/dot-authorization)
-[![PHPStan](https://github.com/dotkernel/dot-authorization/actions/workflows/static-analysis.yml/badge.svg?branch=3.0)](https://github.com/dotkernel/dot-authorization/actions/workflows/static-analysis.yml)
+[![PHPStan](https://github.com/dotkernel/dot-authorization/actions/workflows/static-analysis.yml/badge.svg?branch=3.x)](https://github.com/dotkernel/dot-authorization/actions/workflows/static-analysis.yml)

@@ -6,19 +6,19 @@ namespace DotTest\Authorization\Role;
 
 use Dot\Authorization\Role\RoleInterface;
 use PHPUnit\Framework\MockObject\Exception;
-use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
 
 class RoleInterfaceTest extends TestCase
 {
-    protected RoleInterface|MockObject $roleInterfaceMock;
+    protected RoleInterface|Stub $roleInterfaceMock;
 
     /**
      * @throws Exception
      */
     public function setUp(): void
     {
-        $this->roleInterfaceMock = $this->createMock(RoleInterface::class);
+        $this->roleInterfaceMock = $this->createStub(RoleInterface::class);
         $this->roleInterfaceMock->method('getName')->willReturn('Test');
     }
 
